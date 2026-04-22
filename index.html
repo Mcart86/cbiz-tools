@@ -84,11 +84,9 @@
       max-width: 600px; margin: 0 auto;
     }
     .hero-logo {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 11px; font-weight: 700;
-      letter-spacing: 0.22em; text-transform: uppercase;
-      color: rgba(255,255,255,0.40);
-      margin-bottom: 14px;
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: center;
     }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 7px;
@@ -404,7 +402,9 @@
 
   <header class="hero">
     <div class="hero-inner">
-      <div class="hero-logo">CBIZCAPITAL</div>
+      <div class="hero-logo">
+        <img src="https://cbizcapital.com/wp-content/uploads/2024/02/Group-1321316416.png" alt="CBIZCAPITAL" style="height:38px; width:auto; filter: brightness(0) invert(1);" />
+      </div>
       <div class="hero-badge">Free Loan Qualification Tool</div>
       <h1>DSCR <span>Calculator</span></h1>
       <p>Instantly estimate your Debt Service Coverage Ratio and see if your rental property qualifies — no W-2s, tax returns, or income verification required.</p>
@@ -629,19 +629,25 @@
           vBar.style.background = 'rgba(13,158,106,0.07)';
           vDot.style.background = '#0D9E6A';
           vMsg.style.color      = '#0D9E6A';
-          vMsg.textContent      = 'Strong qualification — most DSCR lenders require a minimum of 1.20–1.25x.';
+          vMsg.textContent      = 'Strong qualification — excellent DSCR with full LTV and flexible credit options available.';
         } else if (dscr >= 1.0) {
+          rDscr.classList.add('is-pass');
+          vBar.style.background = 'rgba(13,158,106,0.07)';
+          vDot.style.background = '#0D9E6A';
+          vMsg.style.color      = '#0D9E6A';
+          vMsg.textContent      = 'Qualifies — good DSCR with standard LTV and credit options available.';
+        } else if (dscr >= 0.75) {
           rDscr.classList.add('is-warn');
           vBar.style.background = 'rgba(169,114,0,0.07)';
           vDot.style.background = '#A97200';
           vMsg.style.color      = '#A97200';
-          vMsg.textContent      = 'Borderline — some lenders accept 1.0x, but better rates come with a ratio above 1.25x.';
+          vMsg.textContent      = 'May qualify — lower DSCR programs available with reduced LTV and stronger credit requirements. Contact us to discuss options.';
         } else {
           rDscr.classList.add('is-fail');
           vBar.style.background = 'rgba(198,48,39,0.07)';
           vDot.style.background = '#C63027';
           vMsg.style.color      = '#C63027';
-          vMsg.textContent      = 'Below 1.0x — rental income does not cover total debt service at these terms.';
+          vMsg.textContent      = 'Below minimum threshold — rental income does not support current loan terms. Try adjusting the loan amount or rate.';
         }
       }
     }
