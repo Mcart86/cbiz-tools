@@ -56,7 +56,7 @@
 
     /* ── HERO ── */
     .hero {
-      background: #ffffff;
+      background: var(--navy);
       padding: 32px 20px 40px;
       text-align: center;
       position: relative;
@@ -118,7 +118,7 @@
     .hero h1 span { color: var(--blue-light); }
     .hero p {
       font-size: 14px; line-height: 1.65; font-weight: 300;
-      color: var(--ink-60);
+      color: rgba(255,255,255,0.65);
       max-width: 420px; margin: 0 auto;
     }
 
@@ -150,7 +150,7 @@
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 9px; font-weight: 600;
       letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--ink-35); margin-bottom: 6px;
+      color: rgba(255,255,255,0.40); margin-bottom: 6px;
     }
     .r-value {
       font-family: 'Barlow Condensed', sans-serif;
@@ -195,7 +195,7 @@
     .card:focus-within { border-color: var(--card-hover); }
     .card-header {
       padding: 13px 16px 11px;
-      border-bottom: 1px solid var(--card-border);
+      border-bottom: 1px solid var(--navy-border);
       display: flex; align-items: center; gap: 9px;
       background: var(--head-bg);
     }
@@ -413,7 +413,7 @@
 
     <!-- LOGO BAR -->
     <div style="display:flex; justify-content:center; align-items:center; background:#fff; border-radius:var(--r-lg); border:1px solid var(--card-border); padding:12px 20px; margin-bottom:14px; overflow:hidden;">
-      <img src="./logo.png" alt="CBIZCAPITAL" style="height:70px; width:auto;" />
+      <img src="./logo.png" alt="CBIZCAPITAL" style="height:70px; width:auto; filter:brightness(0) invert(1);" />
     </div>
 
     <!-- RESULTS -->
